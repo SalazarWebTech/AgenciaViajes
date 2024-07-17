@@ -1,0 +1,149 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+/* Estilos del menú de navegación */
+nav {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+nav ul {
+    padding: 0;
+    list-style: none;
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+/* Estilos de las secciones */
+section {
+    padding: 2rem 0;
+}
+h1, h2 {
+    color: #333;
+}
+/* Estilos del banner */
+#banner {
+    background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+/* Estilos de los destinos */
+.destino {
+    background: #f4f4f4;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+/* Estilos de los paquetes */
+#lista-paquetes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+.paquete {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    background: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.paquete:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.paquete img {
+    width: 100%;
+    height: auto;
+}
+.paquete h3 {
+    margin: 0;
+    color: #333;
+}
+.paquete p {
+    margin: 0.5rem 0;
+}
+/* Estilos del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Estilos de los formularios */
+form {
+    background: #f4f4f4;
+    padding: 2rem;
+}
+input[type="text"], input[type="email"], input[type="tel"], textarea, select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+input[type="submit"] {
+    background: #fafafa;
+    color: #fff;
+    border: 0;
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background: #fffefe;
+}
+/* Estilos del pie de página */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+#redes-sociales a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+#redes-sociales a:hover {
+    text-decoration: underline;
+}

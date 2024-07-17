@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia de Viajes</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#destinos">Destinos</a></li>
+                <li><a href="#paquetes">Paquetes</a></li>
+                <li><a href="#reservaciones">Reservaciones</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="inicio">
+        <div id="banner">
+            <h1>Bienvenido a nuestra Agencia de Viajes</h1>
+            <p>Descubre el mundo con nosotros</p>
+        </div>
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            <p>Ofrecemos paquetes personalizados, asesoramiento experto y los mejores precios para tus viajes.</p>
+            <h2>Testimonios</h2>
+            <div id="testimonios"></div>
+        </div>
+    </section>
+
+    <section id="destinos">
+        <div class="container">
+            <h2>Destinos Populares</h2>
+            <div>
+                <label for="filtro-continente">Continente:</label>
+                <select id="filtro-continente">
+                    <option value="">Todos</option>
+                    <option value="europa">Europa</option>
+                    <option value="america">América</option>
+                    <option value="asia">Asia</option>
+                    <option value="africa">África</option>
+                    <option value="oceania">Oceanía</option>
+                </select>
+                <label for="filtro-tipo">Tipo de Viaje:</label>
+                <select id="filtro-tipo">
+                    <option value="">Todos</option>
+                    <option value="aventura">Aventura</option>
+                    <option value="playa">Playa</option>
+                    <option value="cultural">Cultural</option>
+                </select>
+            </div>
+            <div id="lista-destinos"></div>
+        </div>
+    </section>
+
+    <section id="paquetes">
+        <div class="container">
+            <h2>Nuestros Paquetes</h2>
+            <div id="lista-paquetes" class="grid"></div>
+        </div>
+    </section>
+
+    <section id="reservaciones">
+        <div class="container">
+            <h2>Haz tu Reserva</h2>
+            <form id="formulario-reserva">
+                <input type="text" id="nombre" placeholder="Nombre completo" required>
+                <input type="email" id="email" placeholder="Correo electrónico" required>
+                <input type="tel" id="telefono" placeholder="Número de teléfono" required>
+                <select id="destino" required>
+                    <option value="">Selecciona un destino</option>
+                </select>
+                <select id="paquete" required>
+                    <option value="">Selecciona un paquete</option>
+                </select>
+                <input type="date" id="fecha-viaje" required>
+                <input type="submit" value="Reservar">
+            </form>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <div class="container">
+            <h2>Contáctanos</h2>
+            <form id="formulario-contacto">
+                <input type="text" id="nombre-contacto" placeholder="Nombre completo" required>
+                <input type="email" id="email-contacto" placeholder="Correo electrónico" required>
+                <textarea id="mensaje" placeholder="Tu mensaje" required></textarea>
+                <input type="submit" value="Enviar">
+            </form>
+            <div id="info-contacto">
+                <h3>Información de Contacto</h3>
+                <p>Dirección: Calle Principal 123, Ciudad</p>
+                <p>Teléfono: +1 234 567 890</p>
+                <p>Email: info@agenciadeviajes.com</p>
+            </div>
+            <div id="mapa" style="height: 400px; background: #eee;">
+                <!-- Aquí se cargará el mapa de Google -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Agencia de Viajes. Todos los derechos reservados.</p>
+            <div id="redes-sociales">
+                <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">Twitter</a>
+                <a href="#" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal para detalles de paquetes -->
+    <div id="modal-paquete" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-titulo"></h2>
+            <p id="modal-destino"></p>
+            <p id="modal-duracion"></p>
+            <p id="modal-precio"></p>
+            <p id="modal-incluye"></p>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
